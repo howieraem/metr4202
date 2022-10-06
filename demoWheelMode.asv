@@ -1,0 +1,25 @@
+o  = MyDynamixel();
+o.portNum = 9; % COM16
+o.baudNum = 1; % baud = 1000000 bps
+o.init()
+o.addDevice(16); % ID = 16
+%% Set Speed
+o.setSpeed('id',16,'RPM',0); % set speed 10 rpm
+%% Set Wheel Mode
+o.setMode('id',16,
+
+%% Write Command
+% while 1
+%     k = input('angle=: ');
+%     if strcmp(k,'q')
+%         break;
+%     end
+%     o.writeAngle('id',5,'deg',k);
+%     o.writeAngle('id',16,'deg',k);
+% end
+
+
+% o.writeAngle('id',5,'rad',pi);
+% o.writeAngle('index',1,'deg',100);
+% o.writeAngle('index',1,'rad',pi);
+% o.Exit();
